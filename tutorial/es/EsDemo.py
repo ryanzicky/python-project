@@ -15,16 +15,14 @@ Elasticsearch 基本介绍及其与 Python 的对接实现
 https://cuiqingcai.com/6214.html
 '''
 
-es = Elasticsearch([{'host': '47.105.171.231', 'port': 9200}])
+es = Elasticsearch()
 result = es.indices.create(index='news', ignore=400)
 
 # # 创建索引
-# es = Elasticsearch([{'host': '47.105.171.231', 'port': 9200}])
 # result = es.indices.create(index='news1', ignore=400)
 # print(result)
 #
 # # 删除索引
-# es = Elasticsearch([{'host': '47.105.171.231', 'port': 9200}])
 # result = es.indices.delete(index='news', ignore=[400, 404])
 # print(result)
 
