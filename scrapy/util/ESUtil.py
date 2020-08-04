@@ -8,7 +8,7 @@
 
 from elasticsearch import Elasticsearch
 
-es = Elasticsearch()
+es = Elasticsearch([{'host': '47.105.171.231', 'port': 9200}])
 
 
 def get_es_index(index_name):

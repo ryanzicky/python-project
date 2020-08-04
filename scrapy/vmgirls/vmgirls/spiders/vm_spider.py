@@ -9,18 +9,18 @@ class VmSpiderSpider(CrawlSpider):
     start_urls = ['http://www.vmgirls.com/']
 
     rules = (
-        Rule(LinkExtractor(allow=r'https://www.vmgirls.com/special/%e8%bd%bb%e7%a7%81%e6%88%bf/'), follow=False),
-        # Rule(LinkExtractor(allow=r'https://www.vmgirls.com/\w.html'), callback='parse_item', follow=False),
+        Rule(LinkExtractor(allow=r'https://www.vmgirls.com/'), follow=False),
+        Rule(LinkExtractor(allow=r'https://www.vmgirls.com/\w'), callback='parse_item', follow=False),
     )
 
-    def parse(self, response):
-        # print('=' * 30)
-        # print(response.text)
-        # print('=' * 30)
-        div_list = response.xpath('/html/body/main/div/div[1]/div')
-        print(div_list[0])
-        for div in div_list:
-            print(div.xpath('./div/div[1]/a/@title'))
+    # def parse(self, response):
+    #     # print('=' * 30)
+    #     # print(response.text)
+    #     # print('=' * 30)
+    #     div_list = response.xpath('/html/body/main/div/div[1]/div')
+    #     print(div_list[0])
+    #     for div in div_list:
+    #         print(div.xpath('./div/div[1]/a/@title'))
 
     def parse_item(self, response):
         # print('=' * 30)
