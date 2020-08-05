@@ -17,6 +17,7 @@ url = 'https://www.kuaidaili.com/free/'
 ua = Faker().chrome()
 headers = {'User-Agent': ua}
 
+
 # 获取代理IP列表
 def get_proxy_list():
     proxy_list = []
