@@ -20,7 +20,6 @@ class UserAgentMiddleware(object):
         for p in proxy_list:
             if p[0:str(p).find(':')] == 'https':
                 proxy = p
-        print('proxy = ', proxy)
         request.meta['proxy'] = proxy
 
 
