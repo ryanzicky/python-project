@@ -3,7 +3,7 @@
 # @Time    : 2020/7/31 16:52
 # @Author  : JiaYan
 # @Site    : 
-# @File    : proxy_util.py
+# @File    : proxy_utils.py
 # @Software: PyCharm
 
 import requests
