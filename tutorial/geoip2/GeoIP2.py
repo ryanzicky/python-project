@@ -22,6 +22,6 @@ y = random.randint(0, 255)
 randomIP = str(m)+'.'+str(n)+'.'+str(x)+'.'+str(y)
 print(randomIP)
 
-response = reader.city(randomIP)
+response = reader.city(str(randomIP))
 print(response)
 
