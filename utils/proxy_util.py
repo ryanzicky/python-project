@@ -50,5 +50,9 @@ def get_proxy():
     return random.choice(proxy_list)
 
 
+def get_proxies():
+    return get_proxy_list()
+
+
 if __name__ == '__main__':
     get_proxy()
