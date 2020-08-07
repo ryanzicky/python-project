@@ -7,7 +7,7 @@
 
 from scrapy import signals
 from faker import Faker
-from proxy_util import get_proxy
+
 
 class RequestHeadersDownloadMiddleware(object):
 

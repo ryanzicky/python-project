@@ -6,8 +6,7 @@
 # https://docs.scrapy.org/en/latest/topics/spider-middleware.html
 
 from scrapy import signals
-from faker import Faker
-from proxy_util import *
+from utils.proxy_util import *
 
 
 class UserAgentMiddleware(object):

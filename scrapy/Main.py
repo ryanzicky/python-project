@@ -9,7 +9,7 @@
 import requests
 from faker import Faker
 from lxml import etree
-from proxy_util import get_proxy
+from utils.proxy_util import get_proxy
 
 # url = 'http://www.baidu.com'
 # url = 'https://www.vmgirls.com/' # 唯美图片
