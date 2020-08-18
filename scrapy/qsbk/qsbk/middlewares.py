@@ -6,23 +6,21 @@
 # https://docs.scrapy.org/en/latest/topics/spider-middleware.html
 
 from scrapy import signals
-from utils.proxy_util import *
-
+from faker import Faker
+from utils.proxy_util import get_proxy
 
 class UserAgentMiddleware(object):
 
     def process_request(self, request, spider):
         ua = Faker().chrome()
+        print('ua = ', ua)
         request.headers['User-Agent'] = ua
-        proxy_list = get_proxy_list()
-        proxy = ''
-        for p in proxy_list:
-            if p[0:str(p).find(':')] == 'https':
-                proxy = p
+        proxy = get_proxy()
+        print('proxy = ', proxy)
         request.meta['proxy'] = proxy
 
 
-class DoubanSpiderMiddleware(object):
+class QsbkSpiderMiddleware(object):
     # Not all methods need to be defined. If a method is not defined,
     # scrapy acts as if the spider middleware does not modify the
     # passed objects.
@@ -70,7 +68,7 @@ class DoubanSpiderMiddleware(object):
         spider.logger.info('Spider opened: %s' % spider.name)
 
 
-class DoubanDownloaderMiddleware(object):
+class QsbkDownloaderMiddleware(object):
     # Not all methods need to be defined. If a method is not defined,
     # scrapy acts as if the downloader middleware does not modify the
     # passed objects.
