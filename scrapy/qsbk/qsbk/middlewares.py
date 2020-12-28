@@ -7,7 +7,7 @@
 
 from scrapy import signals
 from faker import Faker
-from utils.proxy_util import get_proxy
+from util.proxy_util import get_proxy
 
 class UserAgentMiddleware(object):
 

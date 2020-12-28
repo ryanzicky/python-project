@@ -2,8 +2,8 @@ import requests
 
 from faker import Faker
 from lxml import etree
-from utils.proxy_util import get_proxy
-from utils.ESUtil import *
+from util.proxy_util import get_proxy
+from util.ESUtil import *
 import time
 
 url = 'https://www.vmgirls.com/'  # 唯美图片

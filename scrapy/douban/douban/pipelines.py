@@ -15,7 +15,7 @@ if not es.indices.exists(index='douban_movie'):
 class DoubanPipeline(object):
 
     def process_item(self, item, spider):
-        print('item ===== ', item)
-        # result = es.index(index='douban_movie', body=item)
-        # print(result)
+        # print('item ===== ', item)
+        result = es.index(index='douban_movie', body=item)
+        print(result)
         return item

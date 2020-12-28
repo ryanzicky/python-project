@@ -8,8 +8,8 @@
 import requests
 
 from faker import Faker
-# from utils.proxy_util import get_proxy, get_proxies
-from utils.xila_proxy_util import get_proxies
+# from util.proxy_util import get_proxy, get_proxies
+from util.xila_proxy_util import get_proxies
 
 # 生成代理
 proxies = get_proxies()
